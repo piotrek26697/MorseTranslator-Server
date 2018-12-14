@@ -30,7 +30,7 @@ public class SingleService implements Closeable
                 char command = dataInput.toLowerCase().charAt(0);
                 if (dataInput.length() >= 2)
                     dataInput = dataInput.substring(2);
-                String dataOutput = new String("");
+                String dataOutput = "";
 
                 switch (command)
                 {
