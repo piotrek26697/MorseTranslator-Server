@@ -5,9 +5,17 @@ import pl.polsl.model.*;
 import java.io.IOException;
 import java.net.Socket;
 
+/**
+ *Server TCP providing Morse Translation services
+ * @author Piotr Musioł
+ * @version 1.0
+ */
 public class Main
 {
 
+    /**
+     * @param args command line arguments
+     */
     public static void main(String[] args)
     {
         try (ServerTCP server = new ServerTCP())

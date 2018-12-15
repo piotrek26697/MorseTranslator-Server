@@ -5,12 +5,26 @@ import pl.polsl.model.*;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * Class object represents a service that can be provided to the connected customer
+ * @author Piotr Musioł
+ * @version 1.0
+ */
 public class SingleService implements Closeable
 {
+    /**
+     * socket
+     */
     private Socket socket;
 
+    /**
+     * input buffer
+     */
     private BufferedReader input;
 
+    /**
+     * output buffer
+     */
     private PrintWriter output;
 
     public SingleService(Socket socket) throws IOException
@@ -20,6 +34,12 @@ public class SingleService implements Closeable
         input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 
+    /**
+     * Method that provides specified services for the client
+     * @param coder object that translates text into Morse code
+     * @param decoder object that translates Morse code into text
+     * @param connection variable that is used to disconnect the client
+     */
     public void realize(Coder coder, Decoder decoder, boolean connection)
     {
         try
@@ -84,6 +104,10 @@ public class SingleService implements Closeable
         }
     }
 
+    /**
+     * Closing stream and releasing any system resources
+     * @throws IOException if an I/O error occur
+     */
     @Override
     public void close() throws IOException
     {

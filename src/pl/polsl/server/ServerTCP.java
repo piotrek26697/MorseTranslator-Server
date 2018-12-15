@@ -4,11 +4,21 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.util.Properties;
 
-
+/**
+ * Class object represent the TCP server
+ * @author Piotr Musioł
+ * @version 1.0
+ */
 public class ServerTCP implements Closeable
 {
+    /**
+     * port
+     */
     private int port = 9090;
 
+    /**
+     * server's socket
+     */
     ServerSocket serverSocket;
 
     ServerTCP() throws IOException
@@ -25,6 +35,10 @@ public class ServerTCP implements Closeable
         serverSocket = new ServerSocket(port);
     }
 
+    /**
+     *Closes stream and releases any system resources
+     * @throws IOException if an I/O error occur
+     */
     @Override
     public void close() throws IOException
     {
