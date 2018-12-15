@@ -6,6 +6,7 @@ import java.util.Properties;
 
 /**
  * Class object represent the TCP server
+ *
  * @author Piotr Musioł
  * @version 1.0
  */
@@ -36,7 +37,8 @@ public class ServerTCP implements Closeable
     }
 
     /**
-     *Closes stream and releases any system resources
+     * Closes stream and releases any system resources
+     *
      * @throws IOException if an I/O error occur
      */
     @Override

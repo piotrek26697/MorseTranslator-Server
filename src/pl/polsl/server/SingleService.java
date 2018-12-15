@@ -7,6 +7,7 @@ import java.net.Socket;
 
 /**
  * Class object represents a service that can be provided to the connected customer
+ *
  * @author Piotr Musioł
  * @version 1.0
  */
@@ -36,8 +37,9 @@ public class SingleService implements Closeable
 
     /**
      * Method that provides specified services for the client
-     * @param coder object that translates text into Morse code
-     * @param decoder object that translates Morse code into text
+     *
+     * @param coder      object that translates text into Morse code
+     * @param decoder    object that translates Morse code into text
      * @param connection variable that is used to disconnect the client
      */
     public void realize(Coder coder, Decoder decoder, boolean connection)
@@ -106,6 +108,7 @@ public class SingleService implements Closeable
 
     /**
      * Closing stream and releasing any system resources
+     *
      * @throws IOException if an I/O error occur
      */
     @Override
