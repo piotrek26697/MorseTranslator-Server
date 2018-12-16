@@ -114,6 +114,8 @@ public class SingleService implements Closeable
     @Override
     public void close() throws IOException
     {
+        output.close();
+        input.close();
         if (socket != null)
         {
             socket.close();
